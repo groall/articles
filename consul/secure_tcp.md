@@ -146,6 +146,6 @@ export CONSUL_CACERT=/etc/consul.d/consul-agent-ca.pem
 ```
 
 Official tutorials:
-* [https://learn.hashicorp.com/tutorials/consul/tls-encryption-openssl-secure?in=consul/security-operations настройка SSL с помощью openssl]
-* [https://learn.hashicorp.com/tutorials/consul/tls-encryption-secure-existing-datacenter как настроить SSL в существующем ДЦ]
-* [https://learn.hashicorp.com/tutorials/consul/tls-encryption-secure гайд по безопасности]
+* [TLS encryption secure with openssl](https://learn.hashicorp.com/tutorials/consul/tls-encryption-openssl-secure?in=consul/security-operations)
+* [TLS encryption secure in existing datacenter](https://learn.hashicorp.com/tutorials/consul/tls-encryption-secure-existing-datacenter
+* [TLS encryption secure](https://learn.hashicorp.com/tutorials/consul/tls-encryption-secure]
