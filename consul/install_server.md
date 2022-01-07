@@ -1,4 +1,4 @@
-### Install client's agent (ubuntu/debian)
+### Install server's agent (ubuntu/debian)
 
 #### install
 Install software-properties-common:
@@ -28,6 +28,29 @@ Set server's address:
 
 `retry_join = ["consul.foo-company.net"]`
 
+Add node name, `server1` - does not affect anything but for usability
+
+`node_name = "server1"`
+
+Set address to bind:
+
+`client_addr = "0.0.0.0"`
+
+Enable UI:
+```
+ui_config{
+  enabled = true
+}
+```
+
+Enable server mode:
+
+`server = true`
+
+Set number of nodes for running cluster. You should use minimum 2 servers to provide no failure tolerance.
+
+`bootstrap_expect=2`
+
 Save the config.
 
 #### start
@@ -44,4 +67,4 @@ Enable autostart for a service:
 
 `systemctl enable consul`
 
-Check consul UI - our new node have popped up there.
+Check consul UI - new node and new 'consul' service have popped up there.
