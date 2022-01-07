@@ -8,4 +8,5 @@
 * consul-template
   * [install](install_consul_template.md)
   * [use](use_consul_template.md)
+* [service mesh](service_mesh.md)
 * [auto scraping services list in prometheus](scraping_in_prometheus.md)
