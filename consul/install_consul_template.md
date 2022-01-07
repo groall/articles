@@ -15,7 +15,28 @@ unzip consul-template_${CT_VER}_linux_amd64.zip -d /usr/bin
 consul-template -v
 ```
 
-#### Generate a token for access to consul resources
+#### Set ACL
+
+Generate a token for access to consul resources.
+
+If use enabled deduplicate, set these rules to token:
+```hcl
+key_prefix "consul-template/dedup/" {
+  policy = "write"
+}
+session_prefix "" {
+  policy = "write"
+}
+```
+
+Additionally, give access to your api's keys 
+```hcl
+key_prefix "my_api/" {
+  policy = "read"
+}
+```
+
+#### Create templates config 
 
 Create a folder for configs:
 ```bash
@@ -96,3 +117,4 @@ If status is 'active', exec to enable autostart new service:
 ```bash
 systemctl enable consul-template
 ```
+

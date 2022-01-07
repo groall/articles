@@ -4,6 +4,7 @@
 * secure
   * [secure gossip](secure_gossip.md)
   * [secure gossip](secure_tcp.md)
+  * [secure acl](secure_acl.md)
 * consul-template
   * [install](install_consul_template.md)
   * [use](use_consul_template.md)
