@@ -8,7 +8,7 @@ sudo apt-get install -y software-properties-common
 ```
 
 Add repo with consul:
-```consul
+```bash
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 sudo apt-get update && sudo apt-get install consul
@@ -37,7 +37,7 @@ Set address to bind:
 `client_addr = "0.0.0.0"`
 
 Enable UI:
-```
+```hcl
 ui_config{
   enabled = true
 }
@@ -57,14 +57,18 @@ Save the config.
 
 Start a service:
 
-`systemctl start consul`
+```bash
+systemctl start consul
+```
 
 Check status:
-
-`systemctl status consul`
+```bash
+systemctl status consul
+```
 
 Enable autostart for a service:
-
-`systemctl enable consul`
+```bash
+systemctl enable consul
+```
 
 Check consul UI - new node and new 'consul' service have popped up there.
